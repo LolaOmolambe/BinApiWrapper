@@ -31,7 +31,7 @@ namespace CardData.Logic
                     throw new ArgumentException("Expecting a digits of a Card Number");
                 }
                 if (!digits.Trim().All(c => char.IsNumber(c)) || string.IsNullOrWhiteSpace(digits))
-                    throw new ArgumentException("Enter a valid BIN/IIN number.");
+                    throw new ArgumentNullException("Enter a valid BIN/IIN number.");
 
                 var uri = _configuration["BaseUrl"];
                 uri = uri + digits;
