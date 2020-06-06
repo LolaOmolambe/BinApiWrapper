@@ -88,6 +88,7 @@ namespace CardData
                    };
                });
             services.AddControllers();
+            services.AddMemoryCache();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
